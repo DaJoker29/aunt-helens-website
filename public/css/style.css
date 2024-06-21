@@ -1,0 +1,134 @@
+@import url('grid.css');
+@import url('theme.css');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  font-family: system-ui, sans-serif;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 1.75;
+  overflow-x: clip;
+  min-height: 100svh;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  font-style: italic;
+  background-repeat: no-repeat;
+  background-size: cover;
+  shape-margin: 1rem;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/**
+ * GLOBAL
+ */
+
+p {
+  margin: 0 0 var(--half-gap);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin-bottom: var(--gap);
+  font-family: 'Raleway', system-ui, sans-serif;
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: clamp(2.5rem, calc(2.2rem + 1.5vw), 4rem);
+  line-height: 1;
+}
+h2 {
+  font-size: clamp(2rem, calc(1.7rem + 1.5vw), 3.5rem);
+}
+h3 {
+  font-size: clamp(2rem, calc(1.8rem + 1vw), 3rem);
+}
+h4 {
+  font-size: clamp(1.5rem, calc(1.3rem + 1vw), 2.5rem);
+}
+h5 {
+  font-size: clamp(1rem, calc(0.8rem + 1vw), 2rem);
+}
+h6 {
+  font-size: 1rem;
+}
+
+a {
+  color: inherit;
+  font-weight: bold;
+  text-decoration-line: underline;
+  text-decoration-thickness: 0.15em;
+  text-underline-offset: 0.3em;
+  transition: all 200ms;
+}
+
+a:hover {
+  text-decoration-color: inherit;
+  text-decoration-thickness: 0.3rem;
+  letter-spacing: 1px;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+#layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+}
